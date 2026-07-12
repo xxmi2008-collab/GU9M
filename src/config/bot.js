@@ -24,9 +24,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Owner : https://guns.lol/gu9mball",
+        name: "guns.lol/gu9mball",
         // Activity type number (0 = Playing).
-        type: 4,
+        type: 0,
       },
     ],
   },
@@ -159,36 +159,36 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "bitcoin",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "bitcoin",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "₿",
     },
 
     // Starting balance for new users.
     startingBalance: 0,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 100,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 1,
 
     // Work command random payout range.
-    workMin: 10,
-    workMax: 100,
+    workMin: 1,
+    workMax: 25,
 
     // Beg command random payout range.
-    begMin: 5,
-    begMax: 50,
+    begMin: 1,
+    begMax: 10,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.15,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
-    robFailJailTime: 3600000,
+    robFailJailTime: 86400000,
   },
 
   // =========================
@@ -281,7 +281,7 @@ export const botConfig = {
     defaultRole: null,
 
     // Channel ID where birthday announcements are posted.
-    announcementChannel: null,
+    announcementChannel: 1524185087833411674,
 
     // Timezone used to calculate birthday dates.
     timezone: "UTC",
@@ -303,10 +303,10 @@ export const botConfig = {
       // - "none"        = everyone is auto-verified immediately
       // - "account_age" = account must be older than set days
       // - "server_size" = auto-verify everyone only in smaller servers
-      defaultCriteria: "none",
+      defaultCriteria: "account_age",
 
       // Days used when `defaultCriteria` is `account_age`.
-      defaultAccountAgeDays: 7,
+      defaultAccountAgeDays: 3,
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
@@ -314,7 +314,7 @@ export const botConfig = {
 
       // Allowed safety limits for account-age requirements.
       // 1 = minimum day, 365 = maximum days.
-      minAccountAge: 1,
+      minAccountAge: 3,
       maxAccountAge: 365,
 
       // If true, user receives a DM after verification.
@@ -330,7 +330,7 @@ export const botConfig = {
 
     // Minimum time between verification attempts (milliseconds).
     // 5000 = 5 seconds.
-    verificationCooldown: 5000,
+    verificationCooldown: 10000,
 
     // Maximum failed attempts allowed inside the time window below.
     maxVerificationAttempts: 3,
@@ -368,7 +368,7 @@ export const botConfig = {
     defaultGoodbyeMessage:
       "{user} has left the server. We now have {memberCount} members.",
     // Channel ID for welcome messages.
-    defaultWelcomeChannel: null,
+    defaultWelcomeChannel: 1483478245805658193,
     // Channel ID for goodbye messages.
     defaultGoodbyeChannel: null,
   },
